@@ -1,0 +1,45 @@
+---
+import Typography from "./Typography.astro";
+
+export interface Props {
+    size: "m" | "s";
+    class?: string;
+}
+
+const fileUrl = "http://yamumi-release.myrt.co/images/Yamumi-1.0.1.dmg";
+
+const { size, class: className } = Astro.props;
+---
+
+<a href={fileUrl} class:list={[className, { small: size === "s" }]}>
+    <span class="apple-logo"></span>
+    <Typography as="span" variant="text-s__bold" color="inherit">
+        Скачать {size === "m" && "для macOS 17+"}
+    </Typography>
+</a>
+
+<style>
+    a {
+        background-color: var(--color-text-primary);
+        color: var(--color-background);
+        text-decoration: none;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+    }
+
+    a.small {
+        padding: 5px 7px;
+        border-radius: 5px;
+        gap: 5px;
+    }
+
+    .apple-logo {
+        background-image: url(/apple-logo.svg);
+        display: inline-block;
+        width: 13px;
+        height: 17px;
+    }
+</style>

@@ -1,0 +1,84 @@
+---
+import Typography from "./Typography.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    children?: any;
+    iconColor: "pink" | "blue" | "green" | "yellow";
+    wide?: boolean;
+}
+
+const { iconColor, title, description, wide = false } = Astro.props;
+---
+
+<article class:list={["card", { "card-wide": wide }]}>
+    <span class:list={["card-icon", iconColor]}></span>
+    <Typography as="h3" variant="heading-s" color="primary">{title}</Typography>
+    <Typography variant="text-m" color="quaternary">
+        {description}
+    </Typography>
+    <slot />
+</article>
+
+<style>
+    .card {
+        position: relative;
+        min-height: 176px;
+        overflow: hidden;
+        padding: 70px 24px 31px;
+        border-radius: 16px;
+        background: var(--color-stroke);
+    }
+
+    .card-wide {
+        grid-column: span 2;
+    }
+
+    .card :global(h3) {
+        font-size: var(--text-2xl);
+        letter-spacing: var(--tracking-wider);
+        margin: 0;
+    }
+
+    .card :global(p) {
+        margin-top: 9px;
+        font-size: var(--text-md);
+        line-height: 1.28;
+        color: var(--color-text-muted);
+    }
+
+    .card-icon {
+        position: absolute;
+        top: 27px;
+        left: 23px;
+        width: 16px;
+        height: 10px;
+        border: 3px solid currentColor;
+        border-radius: 5px;
+        transform: rotate(-34deg);
+    }
+
+    .pink {
+        color: var(--color-accent-pink);
+    }
+
+    .blue {
+        color: var(--color-accent-blue);
+    }
+
+    .green {
+        color: var(--color-accent-green);
+    }
+
+    .yellow {
+        color: var(--color-accent-yellow);
+    }
+
+    @media (max-width: 760px) {
+        .card,
+        .card-wide {
+            grid-column: auto;
+        }
+    }
+</style>

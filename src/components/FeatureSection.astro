@@ -1,0 +1,43 @@
+---
+import Typography from "./Typography.astro";
+
+interface Props {
+    id?: string;
+    titleId: string;
+    title: string;
+    description?: string;
+    wide?: boolean;
+}
+
+const { id, titleId, title, description, wide = false } = Astro.props;
+---
+
+<section class:list={["feature", { wide }]} id={id} aria-labelledby={titleId}>
+    <Typography as="h2" variant="heading-m" color="primary">{title}</Typography>
+    {
+        description && (
+            <Typography variant="text-m" color="quaternary" class="description">
+                {description}
+            </Typography>
+        )
+    }
+    <slot />
+</section>
+
+<style>
+    .feature {
+        width: var(--content-max);
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 0 146px;
+    }
+
+    .feature.wide {
+        width: var(--layout-max);
+    }
+
+    .description {
+        max-width: calc(var(--content-max) - 120px);
+        margin: 19px auto 50px;
+    }
+</style>

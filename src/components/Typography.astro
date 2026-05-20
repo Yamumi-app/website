@@ -1,0 +1,95 @@
+---
+export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
+    as?: T;
+    variant?:
+        | "text-s"
+        | "text-s__bold"
+        | "text-m"
+        | "text-l"
+        | "heading-xs"
+        | "heading-s"
+        | "heading-m"
+        | "heading-l";
+    children?: any;
+    color?: "inherit" | "primary" | "secondary" | "tertiary" | "quaternary";
+    class?: string;
+};
+
+const {
+    as = "p",
+    variant = "text-m",
+    color = "inherit",
+    class: className,
+    ...rest
+} = Astro.props;
+
+const Tag = as;
+---
+
+<Tag
+    class:list={[
+        "typography",
+        `variant-${variant}`,
+        `color-${color}`,
+        className,
+    ]}
+    {...rest as any}><slot /></Tag
+>
+
+<style lang="scss">
+    .typography {
+        font-family: var(--typography-font-family-mono);
+        font-variant-ligatures: common-ligatures;
+        font-feature-settings: "liga";
+        margin: 0;
+
+        &.variant-text-s {
+            font: var(--typography-text-s);
+            letter-spacing: var(--typography-text-s_spacing);
+        }
+        &.variant-text-s__bold {
+            font: var(--typography-text-s__bold);
+            letter-spacing: var(--typography-text-s_spacing);
+        }
+        &.variant-text-m {
+            font: var(--typography-text-m);
+            letter-spacing: var(--typography-text-m_spacing);
+        }
+        &.variant-text-l {
+            font: var(--typography-text-l);
+            letter-spacing: var(--typography-text-l_spacing);
+        }
+        &.variant-heading-xs {
+            font: var(--typography-heading-xs);
+            letter-spacing: var(--typography-heading-xs_spacing);
+        }
+        &.variant-heading-s {
+            font: var(--typography-heading-s);
+            letter-spacing: var(--typography-heading-s_spacing);
+        }
+        &.variant-heading-m {
+            font: var(--typography-heading-m);
+            letter-spacing: var(--typography-heading-m_spacing);
+        }
+        &.variant-heading-l {
+            font: var(--typography-heading-l);
+            letter-spacing: var(--typography-heading-l_spacing);
+        }
+
+        &.color-inherit {
+            color: inherit;
+        }
+        &.color-primary {
+            color: var(--color-text-primary);
+        }
+        &.color-secondary {
+            color: var(--color-text-secondary);
+        }
+        &.color-tertiary {
+            color: var(--color-text-tertiary);
+        }
+        &.color-quaternary {
+            color: var(--color-text-quaternary);
+        }
+    }
+</style>

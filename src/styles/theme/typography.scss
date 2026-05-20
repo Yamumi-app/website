@@ -1,0 +1,22 @@
+:root {
+    --typography-font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI";
+
+    --typography-text-s: 400 13.5px/0.95 var(--typography-font-family);
+    --typography-text-s__bold: 600 13.5px/0.95 var(--typography-font-family);
+    --typography-text-s_spacing: -2%;
+    --typography-text-m: 500 17px/1.41 var(--typography-font-family);
+    --typography-text-m_spacing: -1.5%;
+    --typography-text-l: 520 21px/1.14 var(--typography-font-family);
+    --typography-text-l_spacing: -1%;
+
+    --typography-heading-xs: 600 18px/1.32 var(--typography-font-family);
+    --typography-heading-xs_spacing: -3%;
+    --typography-heading-s: 530 21px/1.14 var(--typography-font-family);
+    --typography-heading-s_spacing: -3%;
+    --typography-heading-m: 530 46px/1.21 var(--typography-font-family);
+    --typography-heading-m_spacing: -3%;
+    --typography-heading-l: 530 56px/1.142 var(--typography-font-family);
+    --typography-heading-l_spacing: -0.45%;
+}

@@ -1,0 +1,23 @@
+---
+import Typography from "./Typography.astro";
+
+export interface Props {
+    title: string;
+    children: any;
+}
+
+const { title, children } = Astro.props;
+---
+
+<article>
+    <Typography class="question" as="h3" variant="heading-s" color="primary"
+        >{title}</Typography
+    >
+    <Typography as="p" color="quaternary"><slot /></Typography>
+</article>
+
+<style>
+    .question {
+        margin-bottom: 10px;
+    }
+</style>

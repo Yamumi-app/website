@@ -1,0 +1,18 @@
+---
+export interface Props {
+    class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class:list={[className, "appIcon"]} {...rest}></div>
+
+<style>
+    .appIcon {
+        width: 96px;
+        height: 96px;
+        background-image: url(/appicon@2x.png);
+        background-size: cover;
+    }
+</style>

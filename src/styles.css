@@ -1,0 +1,88 @@
+:root {
+	/* Background colors */
+	--color-bg-primary: #0d0d0c;
+	--color-bg-secondary: #22211f;
+	--color-bg-tertiary: #2a2725;
+	--color-bg-mock: #555;
+	--color-bg-mock-tab: #3f3f3f;
+	--color-bg-mock-active: #696969;
+	--color-bg-video: #24292e;
+	--color-bg-cta: rgba(255, 255, 255, 0.012);
+
+	/* Text colors */
+	--color-text-primary: #f4f1ed;
+	--color-text-secondary: rgba(244, 241, 237, 0.72);
+	--color-text-muted: rgba(244, 241, 237, 0.52);
+	--color-text-tertiary: rgba(244, 241, 237, 0.66);
+	--color-text-inverse: #0e0e0d;
+	--color-text-terminal: rgba(244, 241, 237, 0.78);
+
+	/* Border colors */
+	--color-border-subtle: rgba(255, 255, 255, 0.04);
+	--color-border-light: rgba(255, 255, 255, 0.06);
+	--color-border-medium: rgba(255, 255, 255, 0.1);
+	--color-border-heavy: rgba(255, 255, 255, 0.16);
+	--color-border-xheavy: rgba(255, 255, 255, 0.18);
+	--color-border-video: rgba(92, 127, 190, 0.42);
+	--color-border-player: rgba(255, 117, 135, 0.22);
+
+	/* Accent colors */
+	--color-accent-red: #ff3045;
+	--color-accent-pink: #e944ff;
+	--color-accent-blue: #23c9ff;
+	--color-accent-green: #00f061;
+	--color-accent-yellow: #ffd12b;
+
+	/* Button colors */
+	--color-button-bg: #f6f4f0;
+	--color-button-shadow: rgba(0, 0, 0, 0.16);
+
+	/* Icon colors */
+	--color-icon-gradient-start: #2a2d32;
+	--color-icon-gradient-end: #14161a;
+
+	/* Font families */
+	--font-family-base: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+	--font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	/* Shadows */
+	--shadow-card: 0 30px 80px rgba(0, 0, 0, 0.38);
+	--shadow-icon: 0 22px 50px rgba(0, 0, 0, 0.42), inset 0 0 24px rgba(255, 255, 255, 0.05);
+	--shadow-player: 0 12px 30px rgba(0, 0, 0, 0.28);
+	--shadow-mock: 0 18px 44px rgba(0, 0, 0, 0.34);
+
+	/* Border radius */
+	--radius-sm: 7px;
+	--radius-md: 8px;
+	--radius-lg: 10px;
+	--radius-xl: 11px;
+	--radius-2xl: 22px;
+
+	/* Font sizes */
+	--text-xs: 9px;
+	--text-sm: 10px;
+	--text-base: 11px;
+	--text-md: 12px;
+	--text-lg: 13px;
+	--text-xl: 15px;
+	--text-2xl: 16px;
+	--text-3xl: 17px;
+	--text-hero: clamp(38px, 6vw, 56px);
+	--text-section: clamp(32px, 4vw, 42px);
+	--text-video: clamp(74px, 14vw, 154px);
+
+	/* Letter spacing */
+	--tracking-tight: -0.09em;
+	--tracking-normal: -0.07em;
+	--tracking-wide: -0.06em;
+	--tracking-wider: -0.05em;
+	--tracking-widest: -0.04em;
+	--tracking-relaxed: -0.03em;
+	--tracking-loose: -0.02em;
+
+	/* Layout */
+	--container-max: 980px;
+	--content-max: 740px;
+	--container-padding: 40px;
+}

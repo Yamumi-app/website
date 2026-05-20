@@ -1,0 +1,8 @@
+@use "./theme/typography.scss";
+@use "./theme/color.scss";
+
+:root {
+    --content-max: 880px;
+    --layout-max: 1150px;
+    --layout-padding: 10px;
+}

@@ -1,0 +1,44 @@
+---
+import Typography from "../components/Typography.astro";
+import Question from "../components/Question.astro";
+---
+
+<section class="faq" aria-labelledby="faq-title">
+    <Typography as="h2" variant="heading-m" color="primary">FAQ</Typography>
+    <div class="questions">
+        <Question title="Это безопасно?">
+            За исключением запроса на проверку обновления, все остальные
+            отправляются только на сервера Яндекса. Никакие пользовательские
+            данные не собираются и не передаются.
+        </Question>
+        <Question title="Почему бесплатно?">
+            В связи с политической ситуацией, я не имею возможность официально
+            оформить аккаунт разработчика для подписи приложения, а без этого не
+            считаю возможным требовать за него деньги. Если вам нравится Yamumi
+            — можете оплатить мне кофе.
+        </Question>
+        <Question title="Можно ли пользовать без подписки Яндекса?">
+            Нет. Yamumi использует тот же API, что и официальные клиенты, а
+            значит без подписки не сможет получить полные версии треков и тексты
+            песен.
+        </Question>
+    </div>
+</section>
+
+<style>
+    .faq {
+        width: min(100% - var(--container-padding), 420px);
+        margin: 0 auto;
+        padding: 114px 0 128px;
+        text-align: center;
+    }
+
+    .questions {
+        max-width: 485px;
+        margin: 65px auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+        text-align: start;
+    }
+</style>
