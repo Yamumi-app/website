@@ -1,12 +1,13 @@
 ---
 export interface Props {
+    id?: string;
     class?: string;
 }
 
-const { class: className, ...rest } = Astro.props;
+const { class: className, id, ...rest } = Astro.props;
 ---
 
-<div class:list={[className, "appIcon"]} {...rest}></div>
+<div id={id} class:list={[className, "appIcon"]} {...rest}></div>
 
 <style>
     .appIcon {

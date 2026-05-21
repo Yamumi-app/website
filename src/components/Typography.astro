@@ -12,6 +12,7 @@ export type Props<T extends TagName = "p"> = HTMLElementProps<T> & {
         | "heading-l";
     children?: any;
     color?: "inherit" | "primary" | "secondary" | "tertiary" | "quaternary";
+    id?: string;
     class?: string;
 };
 
@@ -20,6 +21,7 @@ const {
     variant = "text-m",
     color = "inherit",
     class: className,
+    id,
     ...rest
 } = Astro.props;
 
@@ -27,6 +29,7 @@ const Tag = as;
 ---
 
 <Tag
+    id={id}
     class:list={[
         "typography",
         `variant-${variant}`,
