@@ -26,14 +26,10 @@ const { id, titleId, title, description, wide = false } = Astro.props;
 
 <style>
     .feature {
-        width: var(--content-max);
+        width: min(100% - calc(var(--layout-padding) * 2), var(--layout-max));
         margin: 0 auto;
         text-align: center;
         padding: 0 0 146px;
-    }
-
-    .feature.wide {
-        width: var(--layout-max);
     }
 
     .description {

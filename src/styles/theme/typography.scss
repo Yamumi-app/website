@@ -20,3 +20,31 @@
     --typography-heading-l: 530 56px/1.142 var(--typography-font-family);
     --typography-heading-l_spacing: -0.45%;
 }
+
+@media (max-width: 800px) {
+    :root {
+        --typography-text-l: var(--typography-text-m);
+        --typography-text-l_spacing: var(--typography-text-m_spacing);
+
+        --typography-heading-l: 530 46px/1.142 var(--typography-font-family);
+        --typography-heading-l_spacing: -1%;
+
+        --typography-heading-m: 530 42px/1.21 var(--typography-font-family);
+        --typography-heading-m_spacing: -2%;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --typography-text-m: 500 15px/1.41 var(--typography-font-family);
+        --typography-text-m_spacing: -2%;
+        --typography-text-l: 17px/1.41 var(--typography-font-family);
+        --typography-text-l_spacing: -1.5%;
+
+        --typography-heading-l: 530 36px/1.142 var(--typography-font-family);
+        --typography-heading-l_spacing: -1%;
+
+        --typography-heading-m: 530 32px/1.21 var(--typography-font-family);
+        --typography-heading-m_spacing: -2%;
+    }
+}

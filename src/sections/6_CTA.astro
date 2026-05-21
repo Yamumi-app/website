@@ -5,11 +5,13 @@ import DownloadButton from "../components/DownloadButton.astro";
 ---
 
 <section class="cta" aria-labelledby="cta-title">
-    <AppIcon />
-    <Typography class="title" as="h2" variant="heading-s" color="primary">
-        Бесплатно, без подписки, без сбора ваших данных.
-    </Typography>
-    <DownloadButton size="m" />
+    <div class="cta-wrapper">
+        <AppIcon />
+        <Typography class="title" as="h2" variant="heading-s" color="primary">
+            Бесплатно, без подписки, без сбора ваших данных.
+        </Typography>
+        <DownloadButton size="m" />
+    </div>
 </section>
 
 <style>
@@ -19,10 +21,17 @@ import DownloadButton from "../components/DownloadButton.astro";
         border-top: 1px solid var(--color-stroke);
         border-bottom: 1px solid var(--color-stroke);
         background: var(--color-background-secondary);
+    }
+
+    .cta-wrapper {
+        width: min(100% - calc(var(--layout-padding) * 2), var(--layout-max));
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
+        margin: 0 auto;
+        min-height: calc(100vh - 300px);
     }
 
     .title {

@@ -9,7 +9,7 @@ import Typography from "../components/Typography.astro";
     <Typography as="h1" variant="heading-l" color="primary"
         >Плеер Яндекс Музыки<br />для тех, кто занят делом</Typography
     >
-    <Typography as="p" variant="text-l" color="quaternary">
+    <Typography class="description" as="p" variant="text-l" color="quaternary">
         Компактный плеер, без лишних раздражителей. Оптимизирован
         для минимального потребления ресурсов. Спроектирован для комфортного
         фонового использования, не отвлекаясь от работы.
@@ -21,13 +21,14 @@ import Typography from "../components/Typography.astro";
 
 <style lang="scss">
     .hero {
+        width: min(100% - calc(var(--layout-padding) * 2), var(--layout-max));
         max-width: 760px;
         margin: 0 auto;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 139px 0 126px;
+        padding: 175px 0 190px;
 
         h1 {
             margin-top: 68px;
@@ -79,9 +80,13 @@ import Typography from "../components/Typography.astro";
         font-family: var(--font-family-mono);
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 800px) {
+        .description {
+            max-width: 500px;
+        }
+
         .hero {
-            padding: 54px 0 96px;
+            padding: 170px 0 150px;
         }
 
         .app-icon {
