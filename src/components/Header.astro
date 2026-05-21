@@ -4,23 +4,41 @@ import DownloadButton from "./DownloadButton.astro";
 ---
 
 <header class="header">
-    <Typography
-        variant="heading-xs"
-        color="primary"
-        class="brand"
-        as="a"
-        href="#top">Yamumi</Typography
-    >
-    <nav class="nav" aria-label="Основная навигация">
-        <Typography class="links" as="div" variant="text-s" color="tertiary">
-            <a href="#overview">Обзор</a>
-            <a href="#minimalism">Изменения</a>
-        </Typography>
-        <DownloadButton size="s" />
-    </nav>
+    <div class="header-wrapper">
+        <Typography
+            variant="heading-xs"
+            color="primary"
+            class="brand"
+            as="a"
+            href="#top">Yamumi</Typography
+        >
+        <nav class="nav" aria-label="Основная навигация">
+            <Typography
+                class="links"
+                as="div"
+                variant="text-s"
+                color="tertiary"
+            >
+                <a href="#overview">Обзор</a>
+                <a href="#minimalism">Изменения</a>
+            </Typography>
+            <DownloadButton size="s" />
+        </nav>
+    </div>
 
     <style>
         .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--color-background-backdrop);
+            border-bottom: 1px solid var(--color-stroke);
+            width: 100%;
+            backdrop-filter: blur(8px);
+            z-index: 9;
+        }
+
+        .header-wrapper {
             width: min(100% - var(--layout-padding), var(--layout-max));
             margin: 0 auto;
             display: flex;
