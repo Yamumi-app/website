@@ -68,9 +68,29 @@ import FeatureCard from "../components/FeatureGridCard.astro";
         }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 1050px) {
+        img {
+            width: 258px;
+
+            &.lyrics {
+                height: 263px;
+            }
+
+            &.colors {
+                height: 205px;
+            }
+        }
+    }
+
+    @media (max-width: 950px) {
         .cards {
             grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 630px) {
+        img {
+            margin: -5px -24px -30px 0;
         }
     }
 </style>

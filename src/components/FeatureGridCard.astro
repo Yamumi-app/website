@@ -88,10 +88,22 @@ const { icon, id, title, description, wide = false, ...rest } = Astro.props;
         }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 950px) {
         .card,
         .card-wide {
             grid-column: auto;
+        }
+    }
+
+    @media (max-width: 630px) {
+        .card,
+        .card-wide {
+            flex-direction: column;
+            min-height: unset;
+
+            .content-wrapper {
+                margin-top: 44px;
+            }
         }
     }
 </style>
