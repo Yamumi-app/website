@@ -12,9 +12,10 @@ import FeatureCard from "../components/FeatureGridCard.astro";
             description="Цвет плеера автоматически подбирается по обложке текущего
         альбома или песни. Интерфейс остаётся лаконичным всегда."
             wide
+            data-expose="true"
             data-effect="slide"
-            data-hold="50"
-            data-right="50"
+            data-hold="100"
+            data-left="100"
         >
             <img class="colors" src="/colors.png" alt="" />
         </FeatureCard>
@@ -23,6 +24,10 @@ import FeatureCard from "../components/FeatureGridCard.astro";
             icon="keyboard"
             title="Управление клавиатурой"
             description="Управляйте музыкой прямо с клавиатуры. Базовые действия доступны мгновенно."
+            data-continue="true"
+            data-effect="slide"
+            data-hold="150"
+            data-right="100"
         />
         <FeatureCard
             id="resources"
@@ -30,6 +35,10 @@ import FeatureCard from "../components/FeatureGridCard.astro";
             title="Экономия ресурсов"
             description="Yamumi не использует веб-технологии и потребляет в десять раз
             меньше памяти, чем официальный плеер."
+            data-continue="true"
+            data-effect="slide"
+            data-hold="150"
+            data-left="100"
         />
         <FeatureCard
             id="lyrics"
@@ -38,6 +47,10 @@ import FeatureCard from "../components/FeatureGridCard.astro";
             description="Даже маленький плеер может быть удобным для караоке на рабочем
             месте. Yamumi показывает текст песни, чтобы вы могли подпевать и не отвлекаться от дел."
             wide
+            data-effect="slide"
+            data-continue="true"
+            data-hold="150"
+            data-right="100"
         >
             <img class="lyrics" src="/lyrics.png" alt="" />
         </FeatureCard>

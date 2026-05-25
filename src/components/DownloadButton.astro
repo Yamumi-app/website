@@ -8,10 +8,10 @@ export interface Props {
 
 const fileUrl = "http://yamumi-release.myrt.co/images/Yamumi-1.0.1.dmg";
 
-const { size, class: className } = Astro.props;
+const { size, class: className, ...rest } = Astro.props;
 ---
 
-<a href={fileUrl} class:list={[className, { small: size === "s" }]}>
+<a href={fileUrl} class:list={[className, { small: size === "s" }]} {...rest}>
     <span class="apple-logo"></span>
     <Typography as="span" variant="text-s__bold" color="inherit">
         Скачать {size === "m" && "для macOS 17+"}

@@ -1,13 +1,10 @@
 @use "./theme/typography.scss";
 @use "./theme/color.scss";
+@use "../../node_modules/honeymate/style.css";
 
 :root {
     --content-max: 880px;
     --layout-max: 1150px;
     --layout-padding: 16px;
     --size-min-width: 412px;
-}
-
-.honey {
-    opacity: 0;
 }

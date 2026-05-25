@@ -4,12 +4,13 @@ import Typography from "./Typography.astro";
 export interface Props {
     title: string;
     children: any;
+    class?: string;
 }
 
-const { title, children } = Astro.props;
+const { title, class: className, ...rest } = Astro.props;
 ---
 
-<article>
+<article class={className} {...rest}>
     <Typography class="question" as="h3" variant="heading-s" color="primary"
         >{title}</Typography
     >
