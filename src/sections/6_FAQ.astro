@@ -26,7 +26,10 @@ import Question from "../components/Question.astro";
             В связи с политической ситуацией, я не имею возможность официально
             оформить аккаунт разработчика для подписи приложения, а без этого
             не считаю возможным требовать за него деньги. Если вам нравится
-            Yamumi — можете оплатить мне кофе.
+            Yamumi — можете <a
+                href="https://yoomoney.ru/fundraise/1HUJDQO9NCP.260523"
+                >оплатить мне кофе</a
+            >.
         </Question>
         <Question
             class="honey"
@@ -60,5 +63,10 @@ import Question from "../components/Question.astro";
         flex-direction: column;
         gap: 46px;
         text-align: start;
+    }
+
+    a,
+    a:visited {
+        color: inherit;
     }
 </style>
