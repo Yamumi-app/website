@@ -8,3 +8,11 @@
     --layout-padding: 16px;
     --size-min-width: 412px;
 }
+
+a {
+    transition: color 0.3s ease-out;
+}
+
+a:hover {
+    transition: color 0s ease-out;
+}
