@@ -12,8 +12,8 @@ importers:
         specifier: ^6.3.5
         version: 6.3.6(rollup@4.60.4)(sass-embedded@1.99.0)(sass@1.99.0)
       honeymate:
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.2.1
+        version: 5.2.1
     devDependencies:
       sass-embedded:
         specifier: ^1.99.0
@@ -941,8 +941,8 @@ packages:
   hastscript@9.0.1:
     resolution: {integrity: sha512-g7df9rMFX/SPi34tyGCyUBREQoKkapwdY/T04Qn9TDWfHhAYt4/I0gMVirzK5wEzeUqIjEB+LXC/ypb7Aqno5w==}
 
-  honeymate@5.1.0:
-    resolution: {integrity: sha512-jz8IH9MjKTlRkWXBliNQNbS8elegh5c58fvKJt0YEbCsUPvAR/WMVH/Rf8pXer8ji//qyeHRNS14pCD2FoESag==}
+  honeymate@5.2.1:
+    resolution: {integrity: sha512-Cro4QyGBAC8lRUQpXuMtKhC6zYGxI5dD46CFW6ZZQu/TewL01gG9cJkFpZy6kZDk145685gNvuZ+QNkaI+bYmA==}
 
   html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
@@ -2558,7 +2558,7 @@ snapshots:
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
 
-  honeymate@5.1.0: {}
+  honeymate@5.2.1: {}
 
   html-escaper@3.0.3: {}
 
