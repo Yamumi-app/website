@@ -16,13 +16,22 @@ import VideoPlaceholder from "../components/VideoPlaceholder.astro";
         data-spin="true"
         data-spin-color="#fff"
         data-expose="true"
-        autoplay
+        playsinline
         loop
         muted
     >
         <source src="/following.webm" type="video/webm" />
         <source src="/following.mp4" type="video/mp4" />
     </video>
+
+    <script>
+        const video = document.querySelector<HTMLVideoElement>(".video")!;
+        setInterval(() => {
+            if (video.paused) {
+                video.play();
+            }
+        }, 1000);
+    </script>
 </FeatureSection>
 
 <style>
