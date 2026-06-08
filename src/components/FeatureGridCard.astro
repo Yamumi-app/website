@@ -6,7 +6,7 @@ interface Props {
     title: string;
     description: string;
     children?: any;
-    icon: "brush" | "chip" | "keyboard" | "mic";
+    icon: "brush" | "chip" | "slop" | "mic";
     wide?: boolean;
 }
 
@@ -80,8 +80,8 @@ const { icon, id, title, description, wide = false, ...rest } = Astro.props;
         &._chip {
             --card-icon: url("/icon-chip.svg");
         }
-        &._keyboard {
-            --card-icon: url("/icon-keyboard.svg");
+        &._slop {
+            --card-icon: url("/icon-slop.svg");
         }
         &._mic {
             --card-icon: url("/icon-mic.svg");

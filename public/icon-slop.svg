@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="26px" viewBox="0 0 34 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-slop</title>
+    <defs>
+        <path d="M31,26 L1.00000003,26 L1,3 L31,3 Z" id="path-1"></path>
+    </defs>
+    <g id="icon-slop" stroke="none" fill="none" fill-rule="nonzero" xlink:href="#path-1" font-family="SFProDisplay-Semibold, SF Pro Display" font-size="19.6491932" font-weight="500" letter-spacing="-0.589475811" line-spacing="21.2903226">
+        <text id="􃒇" fill="color(display-p3 0.235 0.827 0.996)">
+            <tspan x="1" y="22">􃒇</tspan>
+        </text>
+    </g>
+</svg>
