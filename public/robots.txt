@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yamumi.myrt.co/sitemap-index.xml

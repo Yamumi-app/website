@@ -1,5 +1,11 @@
 ---
 import "../styles/main.scss";
+
+const siteUrl = "https://yamumi.myrt.co";
+const title = "Yamumi — мини-плеер Яндекс Музыки для Mac";
+const description =
+    "Yamumi — бесплатный мини-плеер Яндекс Музыки для macOS. Компактный интерфейс, низкое потребление ресурсов, поддержка горячих клавиш и текстов песен.";
+const ogImage = `${siteUrl}/og-image.png`;
 ---
 
 <!doctype html>
@@ -8,19 +14,45 @@ import "../styles/main.scss";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={siteUrl} />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:locale" content="ru_RU" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
-        <meta
-            name="description"
-            content="Yamumi — минималистичный плеер Яндекс Музыки для Mac."
-        />
-        <title>Yamumi</title>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "name": "Yamumi",
+                "applicationCategory": "MusicApplication",
+                "operatingSystem": "macOS",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "RUB"
+                }
+            }
+        </script>
     </head>
     <body>
         <slot />
